@@ -17,10 +17,5 @@
     "psr-4": {
       "molchanovvg\\ping\\": ""
     }
-  },
-  "extra": {
-    "branch-alias": {
-      "stable-master": "stable"
-    }
   }
 }
