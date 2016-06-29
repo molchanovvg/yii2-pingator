@@ -3,7 +3,7 @@
   "type": "yii2-extension",
   "description": "Extension for 'pingator' for Yii 2",
   "keywords": ["yii2", "ping", "pingator"],
-  "homepage": ["https://github.com/molchanovvg/yii2-pingator"],
+  "homepage": "https://github.com/molchanovvg/yii2-pingator",
   "license": "MIT",
   "authors": [
     {
