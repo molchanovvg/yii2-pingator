@@ -1,0 +1,21 @@
+{
+  "name": "molchanovvg/yii2-pingator",
+  "type": "yii2-extension",
+  "description": "Extension for 'pingator' for Yii 2",
+  "keywords": ["yii2", "ping", "pingator"],
+  "homepage": ["https://github.com/molchanovvg/yii2-pingator"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Molchanov VG",
+      "email": "valeruko@gmail.com",
+      "homepage": "http://molchanov.site",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "molchanovvg\\ping\\": ""
+    }
+  }
+}
