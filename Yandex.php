@@ -18,7 +18,7 @@ class Yandex extends Client implements Pingable
     public function ping($siteName, $homepage, $url, $rss, $encoding = 'UTF-8')
     {
         $request = xmlrpc_encode_request(
-            'weblogUpdates.extendedPing',
+            'weblogUpdates.Ping', // без extended
             array($siteName, $homepage, $url, $rss),
             ['encoding' => $encoding]
         );
