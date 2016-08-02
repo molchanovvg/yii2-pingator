@@ -5,8 +5,8 @@ namespace  molchanovvg\ping;
 class Ping extends Component
 {
     public $servers = [
-        'molchanovvg\ping\Yandex',
-        'molchanovvg\ping\Google',
+        'molchanovvg\Ping\Yandex',
+        'molchanovvg\Ping\Google',
     ];
 
     /**
@@ -17,9 +17,9 @@ class Ping extends Component
      * @param string $encoding
      * @param null $servers
      */
-    public static function send($siteName, $homepage, $url, $rss, $encoding = "UTF-8", $servers = null)
+    public function send($siteName, $homepage, $url, $rss, $encoding = "UTF-8", $servers = null)
     {
-        $servers = self::getServers($servers);
+        $servers = $this->getServers($servers);
         foreach ($servers as $server) {
             $client = new $server;
             $client->ping($siteName, $homepage, $url, $rss, $encoding = "UTF-8");
@@ -29,15 +29,15 @@ class Ping extends Component
      * @param null|array $servers
      * @return array
      */
-    public static function getServers($servers = null)
+    public function getServers($servers = null)
     {
         if ($servers == null) {
-            return array_values(self::$servers);
+            return array_values($this->$servers);
         } else {
             $result = [];
             foreach ($servers as $k => $server) {
-                if (isset(self::$servers[$k])) {
-                    $result[] = self::$servers[$k];
+                if (isset($this->$servers[$k])) {
+                    $result[] = $this->$servers[$k];
                 }
             }
             return $result;
