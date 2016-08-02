@@ -1,13 +1,14 @@
 <?php
+
 namespace  molchanovvg\ping;
-class Ping
+
+class Ping extends Component
 {
-    const SERVER_YANDEX = 'yandex';
-    const SERVER_GOOGLE = 'google';
-    public static $servers = [
-        self::SERVER_YANDEX => 'molchanovvg\ping\Yandex',
-        self::SERVER_GOOGLE => 'molchanovvg\ping\Google',
+    public $servers = [
+        'molchanovvg\ping\Yandex',
+        'molchanovvg\ping\Google',
     ];
+
     /**
      * @param $siteName
      * @param $homepage
