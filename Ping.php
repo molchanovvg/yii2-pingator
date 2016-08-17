@@ -1,4 +1,5 @@
 <?php
+use yii\base\Component;
 
 namespace  molchanovvg\ping;
 
