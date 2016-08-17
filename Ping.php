@@ -1,7 +1,7 @@
 <?php
-use yii\base\Component;
-
 namespace  molchanovvg\ping;
+
+use \yii\base\Component;
 
 class Ping extends Component
 {
