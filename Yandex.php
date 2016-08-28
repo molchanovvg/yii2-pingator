@@ -1,7 +1,8 @@
 <?php
-
 namespace molchanovvg\ping;
+
 use yii\log\Logger;
+
 class Yandex extends Client implements Pingable
 {
     public $serverUrl = 'http://ping.blogs.yandex.ru/RPC2';
@@ -18,7 +19,7 @@ class Yandex extends Client implements Pingable
     public function ping($siteName, $homepage, $url, $rss, $encoding = 'UTF-8')
     {
         $request = xmlrpc_encode_request(
-            'weblogUpdates.Ping', // без extended
+            'weblogUpdates.extendedPing',
             array($siteName, $homepage, $url, $rss),
             ['encoding' => $encoding]
         );
